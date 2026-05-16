@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const axios = require('axios')
 const dotenv = require('dotenv')
+const path = require('path')
 const supabaseClient = require('@supabase/supabase-js')
 
 dotenv.config()
@@ -30,9 +31,7 @@ app.get('/api/search', async (req, res) => {
 
   } catch (error) {
     console.log(error)
-    res.status(500).json({
-      error: 'Search failed'
-    })
+    res.status(500).json({error: 'Search failed'})
   }
 })
 
@@ -48,9 +47,7 @@ app.get('/api/favorites', async (req, res) => {
 
   } catch (error) {
     console.log(error)
-    res.status(500).json({
-      error: 'Failed to get favorites'
-    })
+    res.status(500).json({error: 'Failed to get favorites'})
   }
 })
 
@@ -69,9 +66,7 @@ app.post('/api/favorites', async (req, res) => {
 
   } catch (error) {
     console.log(error)
-    res.status(500).json({
-      error: 'Failed to save favorite'
-    })
+    res.status(500).json({error: 'Failed to save favorite'})
   }
 })
 
@@ -85,22 +80,22 @@ app.delete('/api/favorites/:id', async (req, res) => {
         console.log(error)
         return res.status(500).json(error)
       }
-
-      res.json({
-        message: 'Favorite deleted'
-      })
+      res.json({message: 'Favorite deleted'})
 
     } catch (error) {
       console.log(error)
-      res.status(500).json({
-        error: 'Delete failed'
-      })
+      res.status(500).json({error: 'Delete failed'})
     }
   }
 )
+
+app.use(express.static(path.join(__dirname, '../client')))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client', 'index.html'))
+})
 
 if (require.main === module) {
   app.listen(port, () => console.log(`Server running on port ${port}`))
 }
 
-module.exports = app;
+module.exports = app

@@ -1,4 +1,4 @@
-const BASE_URL = "https://student-support-navigator-vvsu.vercel.app";
+const BASE_URL = "";
 
 async function searchResources(query) {
   const response = await fetch(`${BASE_URL}/api/search?q=${query}`);
