@@ -1,0 +1,44 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: white;
+}
+
+.navbar {
+  background: darkblue;
+  padding: 15px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}

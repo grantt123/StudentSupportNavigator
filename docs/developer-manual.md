@@ -1,4 +1,4 @@
-# StudentSupportNavigator
+### StudentSupportNavigator
 
 # Description
 This website is an application that helps students search for campus resources like libraries, dining halls, etc.
@@ -7,11 +7,9 @@ This website is an application that helps students search for campus resources l
 This application is targeted for desktop & mobile browsers such as Google Chrome and Safari.
 
 # Developer Manual Link
-See the Developer Manual below or inside:
+See the Developer Manual below:
 
-```text
 docs/developer-manual.md
-```
 
 # Developer Manual
 
@@ -46,7 +44,7 @@ SUPABASE_KEY=your_supabase_key
 
 ## Supabase Setup
 
-Run the following SQL code inside the Supabase SQL Editor:
+Run the following SQL code inside Supabase SQL Editor:
 
 create table favorites (
   id bigint generated always as identity primary key,
@@ -56,7 +54,7 @@ create table favorites (
   category text
 );
 
-Then run this after you run the previous code:
+Then run this after you run the previous SQL code:
 
 GRANT SELECT ON public.favorites TO anon;
 GRANT INSERT ON public.favorites TO anon;
@@ -64,7 +62,9 @@ GRANT DELETE ON public.favorites TO anon;
 
 ---
 
-### To Start Backend Application Run This
+### To Start Backend Application 
+
+Run This:
 
 cd server
 npm run dev
@@ -74,9 +74,9 @@ http://localhost:5000
 
 ---
 
-### Start Frontend Application Run This
+### Start Frontend Application
 
-Open another terminal and run:
+Open another terminal and run this:
 
 cd client
 npm run dev
@@ -113,7 +113,7 @@ Deletes a favorite resource by ID.
 
 ---
 
-# Frontend Libraries Used
+# Libraries Used
 
 ## Leaflet.js
 
@@ -129,7 +129,7 @@ Used for displaying resource statistics and visualizations.
 
 - Some OpenStreetMap searches may return inconsistent results depending on wording.
 - Map marker icons may need additional configuration in the deployment.
-- Mobile responsiveness can be improved.
+- Responsiveness can be improved.
 
 ---
 
@@ -140,6 +140,7 @@ Used for displaying resource statistics and visualizations.
 - Category filters
 - Expanded campus datasets
 - Improved chart analytics
+- Ability to type in any keyword
 
 ---
 
