@@ -7,11 +7,9 @@ This website is an application that helps students search for campus resources l
 This application is targeted for desktop & mobile browsers such as Google Chrome and Safari.
 
 # Developer Manual Link
-See the Developer Manual below or inside:
+See the Developer Manual below:
 
-```text
 docs/developer-manual.md
-```
 
 # Developer Manual
 
