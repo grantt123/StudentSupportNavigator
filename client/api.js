@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://student-support-navigator-vvsu.vercel.app";
 
 async function searchResources(query) {
   const response = await fetch(`${BASE_URL}/api/search?q=${query}`);
